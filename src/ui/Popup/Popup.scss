@@ -1,0 +1,106 @@
+.popup-wrapper {
+    position: relative;
+    padding: 40px auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 610%;
+    background-color: hsla(0, 0%, 39%, 0.575);
+    z-index: 10;
+
+    @media (max-width: 1000px) {
+        visibility: hidden;
+        display: none;
+    }
+}
+
+.popup-window {
+    position: fixed;
+    top: 15%;
+    left: 26%;
+    width: 650px;
+    height: 500px;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 11;
+
+    @media (max-width: 1200px) {
+        left: 19%;
+    }
+
+    @media (max-width: 1000px) {
+        visibility: hidden;
+        display: none;
+    }
+}
+
+.popup-crossIcon {
+    float: right;
+    margin: 20px 20px 0 0;
+    cursor: pointer;
+}
+
+.popup-text-row {
+    display: flex;
+    flex-direction: row;
+    margin: 60px auto 0;
+    width: 80%;
+}
+
+.darker {
+    color:hsl(0, 0%, 31%)
+}
+
+.lines-div {
+    margin-top: -15px;
+}
+
+.red-line {
+    margin-top: -13px;
+    width: 190px;
+    border-top: 4px solid hsl(0, 94%, 66%);
+    z-index: 2;
+}
+
+.blue-shape-popup {
+    position: absolute;
+    width: 270px;
+    height: 190px;
+    margin-top: 100px;
+    background-color: hsl(231, 69%, 60%);
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+.popup-illustration {
+    position: relative;
+    top: -50px;
+    left: -90px;
+    z-index: 10;
+    transform: scale(0.55);
+}
+
+.popup-text-column {
+    display: flex;
+    flex-direction: column;
+    margin-left: -120px;
+    inline-size: 250px;
+}
+
+.popup-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.popup-paragraph {
+    inline-size: 250px;
+    text-align: left;
+}
+
+.popup-title {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    font-weight: 500;
+}

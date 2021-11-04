@@ -1,0 +1,42 @@
+.downloadCard-wrapper {
+    margin: 50px auto 0;
+    text-align: center;
+    width: 80%;
+    height: 350px;
+    padding-top: 50px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+
+    @media (min-width: 520px) {
+        width: 400px;
+    }
+
+    @media (min-width: 1250px) {
+        width: 330px;
+        margin: 50px 20px;
+    }
+}
+
+.card-paragraph {
+    font-size: 0.9rem;
+    margin: -10px 0 40px;
+    inline-size: 100%;
+}
+
+.card-button {
+    width: 300px;
+}
+
+.dotted-line {
+    padding: 20px;
+    background-image:
+        radial-gradient(circle at 4px, rgb(209, 209, 209) 1.25px, rgba(201, 201, 201, 0) 2.5px);
+    background-position: top;
+    background-size: 20px 5px, 5px 15px;
+    background-repeat: repeat-x;
+}
+
+h3 {
+    margin-top: 30px;
+    font-weight: 500;
+}

@@ -1,0 +1,19 @@
+.download-section-wrapper {
+    margin: 150px 0 50px;
+}
+
+.card-wrapper {
+    @media (min-width: 1250px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.card2 {
+    margin-top: 40px;
+}
+
+.card3 {
+    margin-top: 80px;
+}

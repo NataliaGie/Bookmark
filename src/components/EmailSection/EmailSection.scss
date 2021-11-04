@@ -1,0 +1,104 @@
+$red: hsl(0, 94%, 66%);
+
+.emailSection-wrapper {
+    background-color: hsl(231, 69%, 60%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px 0;
+}
+
+.joined-paragraph {
+    text-transform: uppercase;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 4px;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+}
+
+.emailSection-title {
+    margin: 0 auto 30px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    inline-size: 87%;
+}
+
+.email-input {
+    padding: 0 20px;
+    margin: 0 auto;
+    width: 262px;
+    height: 50px;
+    border-radius: 6px;
+    border: none;
+    z-index: 2;
+}
+
+::placeholder {
+    color: rgb(175, 175, 175);
+    padding: 0 10px;
+    font-size: 0.94rem;
+    font-weight: 500;
+}
+
+.contact-button {
+    margin: 20px auto;
+    width: 303px;
+    height: 50px;
+    border-radius: 6px;
+    background-color: $red;
+    border: none;
+    color: white;
+    font-weight: 500;
+    font-size: 0.95rem;
+    cursor: pointer;
+
+    @media (min-width: 1200px) {
+        width: 140px;
+        margin-left: 30px;
+        margin-top: 0;
+    }
+
+    &:active, &:hover {
+        color: $red;
+        background-color: white;
+        border: 2.5px solid $red;
+    }
+}
+
+.contact-form {
+    margin: 0 auto;
+    text-align: center;
+
+    @media (min-width: 1200px) {
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+input:focus:invalid {
+    border: 2px solid $red;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20'><g fill='none' fill-rule='evenodd'><circle cx='10' cy='10' r='10' fill='%23FA5959'/><g fill='%23FFF' transform='translate(9 5)'><rect width='2' height='7' rx='1'/><rect width='2' height='2' y='8' rx='1'/></g></g></svg>");
+    background-position: 95% 50%;
+    background-repeat: no-repeat;
+}
+
+.error-message {
+    height: 20px;
+    padding: 6px 0 0 10px;
+    z-index: 0;
+    margin-top: -3px;
+    position: relative;
+    font-size: 0.7rem;
+    font-style: italic;
+    color: white;
+    text-align: left;
+    background-color: $red;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}

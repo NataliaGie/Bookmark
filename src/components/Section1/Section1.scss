@@ -1,0 +1,91 @@
+$blue: hsl(231, 69%, 60%);
+
+@mixin blueShape() {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    margin-top: 130px;
+    background-color: $blue;
+
+    @media (min-width: 680px) {
+        width: 450px;
+        height: 270px;
+    }
+}
+
+.section1-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+    margin-top: 50px;
+
+    @media (min-width: 1200px) {
+        margin-left: 60px;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+}
+
+h1 {
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: center;
+
+    @media (min-width: 1200px) {
+        font-size: 2.2rem;
+        inline-size: 450px;
+        text-align: left;
+    }
+}
+
+.section2-text {
+    margin: 10px auto;
+    font-weight: 300;
+
+    @media (min-width: 1200px) {
+        inline-size: 450px;
+        text-align: left;
+    }
+}
+
+.buttons-row-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+
+    @media (min-width: 1200px) {
+        margin-top: 50px;
+        justify-content: flex-start;
+    }
+}
+
+.rounded-shape-right {
+    @include blueShape();
+    right: 0;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
+.screen-pic {
+    position: absolute;
+    z-index: 5;
+    height: auto;
+    transform: scale(0.55);
+    top: 80px;
+    right: -143px;
+
+    @media (min-width: 680px) {
+        transform: scale(0.8);
+        right: -30px;
+        top: 160px;
+    }
+}
+
+.about-column {
+    @media (min-width: 1200px) {
+        margin: 10px 0 0 50px;
+    }
+}

@@ -1,24 +1,40 @@
-import logo from './logo.svg';
+import { useState, useEffect } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import NavBar from "./components/NavBar/NavBar";
+import Home from './pages/Home/Home';
+import Footer from "./components/Footer/Footer";
+import Popup from "./ui/Popup/Popup";
 import './App.css';
 
 function App() {
+  const [showPopup, setShowPopup] = useState(false);
+
+  window.onload = function () {
+    setTimeout(function () {
+        setShowPopup(true);
+    }, 30000);
+  }
+
+  const onMouseMoveHandler = (e) => {
+    if (e.clientY < 60) {
+      setShowPopup(true);
+    }
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div onMouseMove={onMouseMoveHandler} className="App">
+        {showPopup ? <Popup click={() => setShowPopup(false)} /> : null}
+        <NavBar />
+        <Home />
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
